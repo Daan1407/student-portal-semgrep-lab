@@ -1,0 +1,471 @@
+/* ==========================
+   Global Settings
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        #020617,
+        #071b52,
+        #1e1b4b
+    );
+    color: white;
+    position: relative;
+}
+
+
+/* ==========================
+   Animated Background Glow
+========================== */
+
+.background {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background: #2563eb;
+    border-radius: 50%;
+    filter: blur(200px);
+    opacity: 0.4;
+    animation: glowMove 12s infinite alternate;
+}
+
+
+@keyframes glowMove {
+
+    from {
+        transform: translate(-250px, -200px);
+    }
+
+    to {
+        transform: translate(250px, 200px);
+    }
+}
+
+
+/* ==========================
+   Floating Particles
+========================== */
+
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.particles span {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #60a5fa;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #60a5fa;
+    animation: float 15s linear infinite;
+}
+
+
+/* Random particle positions */
+
+.particles span:nth-child(1) {
+    left: 10%;
+    animation-duration: 8s;
+}
+
+.particles span:nth-child(2) {
+    left: 25%;
+    animation-duration: 12s;
+}
+
+.particles span:nth-child(3) {
+    left: 40%;
+    animation-duration: 10s;
+}
+
+.particles span:nth-child(4) {
+    left: 55%;
+    animation-duration: 15s;
+}
+
+.particles span:nth-child(5) {
+    left: 70%;
+    animation-duration: 9s;
+}
+
+.particles span:nth-child(6) {
+    left: 80%;
+    animation-duration: 14s;
+}
+
+.particles span:nth-child(7) {
+    left: 90%;
+    animation-duration: 11s;
+}
+
+.particles span:nth-child(8) {
+    left: 5%;
+    animation-duration: 13s;
+}
+
+
+@keyframes float {
+
+    from {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+
+/* ==========================
+   Login Card
+========================== */
+
+.login-card {
+
+    width: 430px;
+    padding: 35px;
+
+    background: rgba(255,255,255,0.08);
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 0 50px rgba(37,99,235,0.5);
+
+    text-align: center;
+
+    z-index: 10;
+
+    animation: fadeUp 1s ease;
+
+    transition: 0.2s ease;
+}
+
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==========================
+   Logo
+========================== */
+
+.logo i {
+
+    font-size: 60px;
+
+    color: #60a5fa;
+
+    text-shadow:
+        0 0 25px #3b82f6;
+
+}
+
+
+.logo h1 {
+
+    margin-top: 15px;
+
+    font-size: 32px;
+
+}
+
+
+.logo p {
+
+    color: #cbd5e1;
+
+    margin-top: 8px;
+
+}
+
+
+/* ==========================
+   Security Badge
+========================== */
+
+.security-badge {
+
+    margin-top: 20px;
+
+    padding: 10px;
+
+    border-radius: 15px;
+
+    background: rgba(34,197,94,0.2);
+
+    color: #86efac;
+
+    font-size: 14px;
+
+}
+
+
+.datetime {
+
+    margin-top: 12px;
+
+    color: #93c5fd;
+
+    font-size: 14px;
+
+}
+
+
+/* ==========================
+   Role Selector
+========================== */
+
+
+.role-switch {
+
+    display: flex;
+
+    background: rgba(255,255,255,0.1);
+
+    margin: 25px 0;
+
+    border-radius: 50px;
+
+    padding: 5px;
+
+}
+
+
+.role-switch button {
+
+    flex: 1;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    padding: 12px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.role-switch button.active {
+
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    box-shadow: 0 0 20px #3b82f6;
+
+}
+
+
+/* ==========================
+   Inputs
+========================== */
+
+.input-group {
+
+    position: relative;
+
+    margin-bottom: 20px;
+
+}
+
+
+.input-group input {
+
+    width: 100%;
+
+    padding: 15px 45px;
+
+    border-radius: 15px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
+    outline: none;
+
+}
+
+
+.input-group input::placeholder {
+
+    color: #cbd5e1;
+
+}
+
+
+.input-group input:focus {
+
+    border-color: #3b82f6;
+
+    box-shadow: 0 0 20px #2563eb;
+
+}
+
+
+.input-group i {
+
+    position: absolute;
+
+    top: 16px;
+
+    color: #93c5fd;
+
+}
+
+
+.input-group .fa-user,
+.input-group .fa-lock {
+
+    left: 15px;
+
+}
+
+
+.eye {
+
+    right: 15px;
+
+    cursor: pointer;
+
+}
+
+
+/* ==========================
+   Login Button
+========================== */
+
+.login-btn {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: white;
+
+    cursor: pointer;
+
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    transition: 0.3s;
+
+}
+
+
+.login-btn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 0 25px #7c3aed;
+
+}
+
+
+/* ==========================
+   Forgot Password
+========================== */
+
+.forgot {
+
+    display: block;
+
+    margin-top: 18px;
+
+    color: #93c5fd;
+
+    text-decoration: none;
+
+}
+
+
+.forgot:hover {
+
+    color: white;
+
+}
+
+
+/* ==========================
+   Mobile View
+========================== */
+
+@media (max-width: 500px) {
+
+    .login-card {
+
+        width: 90%;
+
+        padding: 25px;
+
+    }
+
+
+    .logo h1 {
+
+        font-size: 24px;
+
+    }
+
+}

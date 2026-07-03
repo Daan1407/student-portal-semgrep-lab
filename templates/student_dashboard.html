@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | Secure Student Portal</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h2>Secure Portal</h2>
+        </div>
+
+        <nav>
+
+            <a href="#" class="active">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-file-arrow-up"></i>
+                Assignment
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-comments"></i>
+                Messages
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-user"></i>
+                Profile
+            </a>
+
+            <a href="/">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="content">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <h1>Welcome Back, Student 👋</h1>
+                <p>Your academic activities overview</p>
+            </div>
+
+
+            <div class="notification">
+                <i class="fa-solid fa-bell"></i>
+                <span>3</span>
+            </div>
+
+        </header>
+
+
+        <!-- Statistics -->
+        <section class="cards">
+
+            <div class="card">
+                <i class="fa-solid fa-book"></i>
+                <h3>5</h3>
+                <p>Assignments</p>
+            </div>
+
+
+            <div class="card">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>2</h3>
+                <p>Messages</p>
+            </div>
+
+
+            <div class="card">
+                <i class="fa-solid fa-user-check"></i>
+                <h3>90%</h3>
+                <p>Profile Completion</p>
+            </div>
+
+        </section>
+
+
+        <!-- Dashboard Panels -->
+        <section class="dashboard-grid">
+
+
+            <!-- Activities -->
+            <div class="panel">
+
+                <h2>
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    Recent Activities
+                </h2>
+
+
+                <ul>
+
+                    <li>
+                        ✔ Cyber Security Assignment submitted
+                    </li>
+
+                    <li>
+                        ✔ New message received from Lecturer
+                    </li>
+
+
+                    <li>
+                        ✔ Profile updated successfully
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+            <!-- Security -->
+            <div class="panel">
+
+                <h2>
+                    <i class="fa-solid fa-lock"></i>
+                    Security Status
+                </h2>
+
+
+                <ul>
+
+                    <li>
+                        🔒 Session Protected
+                    </li>
+
+                    <li>
+                        🕒 Last Login: Today 10:30 AM
+                    </li>
+
+                    <li>
+                        🛡 Access Level: Student
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Student Portal</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+   <div class="background"></div>
+
+<div class="particles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+
+    <!-- Login Card -->
+    <div class="login-card">
+
+        <div class="logo">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h1>Secure Student Portal</h1>
+            <p>Learn • Connect • Achieve</p>
+        </div>
+
+<!-- Role Selection -->
+<div class="role-switch">
+
+    <button type="button" class="role active">
+        Student
+    </button>
+
+    <button type="button" class="role">
+        Lecturer
+    </button>
+
+</div>
+
+<input type="hidden" id="selectedRole" value="student">
+
+        <!-- Login Form -->
+        <form id="loginForm">
+
+            <div class="input-group">
+                <i class="fa-solid fa-user"></i>
+                <input 
+                type="text"
+                placeholder="Username"
+                required>
+            </div>
+
+
+            <div class="input-group">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input 
+                type="password"
+                id="password"
+                placeholder="Password"
+                required>
+
+                <i class="fa-solid fa-eye eye"></i>
+
+            </div>
+
+
+            <button type="submit" class="login-btn">
+    Login Securely
+</button>
+
+
+            <a href="#" class="forgot">
+                Forgot Password?
+            </a>
+
+        </form>
+
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
+
+    </div>
+
+</body>
+</html>
